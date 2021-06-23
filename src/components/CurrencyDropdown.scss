@@ -1,0 +1,10 @@
+.currencyDropdown {
+    display: flex;
+    flex-direction: column;
+    &:first {
+        padding-bottom: 10px;
+    }
+    &__label {
+        padding-bottom: 5px;
+    }
+}
