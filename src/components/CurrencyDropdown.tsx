@@ -22,7 +22,7 @@ const CurrencyDropdown = ({ onChange, value, label }: CurrencyDropdownProps) => 
 
     return (
         <div className="currencyDropdown">
-            <label className="currencyDropdown__label">{label}:</label>
+            <label className="currencyDropdown__label">{label}</label>
             <Select
                 value={value}
                 onChange={handleChange}

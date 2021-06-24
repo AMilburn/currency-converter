@@ -42,9 +42,6 @@
         display: flex;
         justify-content: flex-end;
         padding: 60px 40px 0 40px;
-        button:first {
-            margin-right: 5px;
-        }
         @media only screen and (max-width: 600px) {
             justify-content: flex-start;
             padding: 60px 0 0 0;

@@ -59,10 +59,9 @@ const CurrencyConverter = () => {
             <h1 className="currencyConverter__title">Currency Converter</h1>
             <div className="currencyConverter__inputs">
                 <div className="currencyConverter__topContainer">
-                    <CurrencyDropdown onChange={setCurr1} value={curr1} label={"Source Currency"} />
+                    <CurrencyDropdown onChange={setCurr1} value={curr1} label="Source Currency" />
                     <AmountInput
                         onChange={handleAmountChange}
-                        disabled={!curr1}
                         label="Source Amount"
                         inputPosition="from"
                         value={finalAmount && source === 'to' ? finalAmount : amount1}
@@ -72,7 +71,6 @@ const CurrencyConverter = () => {
                     <CurrencyDropdown onChange={setCurr2} value={curr2} label="Target Currency" />
                     <AmountInput
                         onChange={handleAmountChange}
-                        disabled={!curr2}
                         label="Target Amount"
                         inputPosition="to"
                         value={finalAmount && source === 'from' ? finalAmount : amount2}
@@ -82,22 +80,22 @@ const CurrencyConverter = () => {
             <div className="currencyConverter__buttonContainer">
                 <Button
                     variant="contained"
-                    color="primary"
-                    size="large"
-                    disabled={missingValues}
-                    onClick={handleConversion}
-                    style={{marginRight: 10}}
-                >
-                    Convert
-                </Button>
-                <Button
-                    variant="contained"
                     color="secondary"
                     size="large"
                     disabled={formEmpty}
                     onClick={clearAllValues}
+                    style={{marginRight: 20}}
                 >
                     Clear
+                </Button>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    disabled={missingValues}
+                    onClick={handleConversion}
+                >
+                    Convert
                 </Button>
             </div>
         </div>
