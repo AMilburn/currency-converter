@@ -4,4 +4,7 @@
   align-items: center;
   height: 100vh;
   background: #90b2e8;
+  @media only screen and (max-width: 600px) {
+    display: initial;
+  }
 }
